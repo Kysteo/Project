@@ -10,8 +10,8 @@
         <a-scene>
             <a-assets>
 <img
-id="grass-base"
-src="assets\Grass_005_BaseColor.jpg"
+id="grass"
+src="assets\grass.jpg"
 >
 <img
 id="grass-ambient-occlusion"
@@ -58,15 +58,49 @@ src="assets\Bark_06_ambientOcclusion.jpg"
 id="treetrunk-normal"
 src="assets\Bark_06_normal.jpg"
 >
+<a-asset-item
+id="money"
+src="assets\money.glb"
+></a-asset-item>
+<a-asset-item
+id="door"
+src="assets\door.glb"
+></a-asset-item>
+<a-asset-item
+id="woodsign"
+src="assets\woodsign.glb"
+></a-asset-item>
+<a-asset-item
+id="bench"
+src="assets\bench.glb"
+></a-asset-item>
+<a-asset-item
+id="cashregister"
+src="assets\cashregister.glb"
+></a-asset-item>
 </a-assets>
             <a-plane
-                color="forestgreen"
+                color="grass"
                 position="0 0 0"
                 rotation="-90 0 0"
                 width="500"
                 height="500"
             >
             </a-plane>
+            <a-plane
+material=
+"src: #grass;
+repeat: 500 500;
+ambientOcclusionMap: #grass-ambient-occlusion;
+ambientOcclusionTextureRepeat: 500 500;
+normalMap: #grass-normal;
+normalTextureRepeat: 500 500"
+position="0 0 0"
+rotation="-90 0 0"
+width="500"
+height="500"
+>
+</a-plane>
             <a-sky
                 color="lightskyblue"
             >
@@ -187,9 +221,31 @@ src="assets\Bark_06_normal.jpg"
                 depth="1"
                 height="1"
             >
-
-
         </a-text>
+         <a-entity
+            gltf-model="#money"
+            position="-40 -3 15"
+            scale=".5 .5 .5"
+        ><a-entity
+            gltf-model="#door"
+            position="79.25 -.25 -26"
+            scale="1.1 1.1 1.1"
+        >
+        <a-entity
+            gltf-model="#woodsign"
+            position="5 -3 2"
+            scale="2 2 2"
+        >
+         <a-entity
+            gltf-model="#bench"
+            position="5 1 2"
+            scale=".01 .01 .01"
+        >
+        <a-entity
+            gltf-model="#cashregister"
+            position=" -30 3 20"
+            scale="5 7 5"
+        >
         </a-scene>
     </body>
 </html>
